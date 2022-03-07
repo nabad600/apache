@@ -50,8 +50,8 @@ ARG DEPS="\
         runit \
         apache2 \
         apache2-utils \
-		php8-intl \
-		snappy \
+	php8-intl \
+	snappy \
         bash \
 "
 
