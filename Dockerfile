@@ -52,6 +52,7 @@ ARG DEPS="\
         apache2-utils \
 		php8-intl \
 		snappy \
+        bash \
 "
 
 RUN set -x \
