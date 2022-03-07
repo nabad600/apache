@@ -69,7 +69,8 @@ COPY httpd.conf /etc/apache2/httpd.conf
 COPY php_ini/php.ini /etc/php8/
 WORKDIR /var/www
 
-RUN mv /usr/bin/php8 /usr/bin/php
+RUN ln -s /usr/bin/php8 /usr/bin/php
+RUN ln -s /etc/php8 /etc/php
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" >> /etc/apk/repositories
 RUN apk add --no-cache php8-pecl-mongodb
 FROM scratch
