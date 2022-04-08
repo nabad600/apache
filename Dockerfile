@@ -48,6 +48,7 @@ ARG DEPS="\
         curl \
         ca-certificates \
         runit \
+	git \
         apache2 \
         apache2-utils \
 	php8-intl \
