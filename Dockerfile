@@ -1,4 +1,4 @@
-FROM alpine:latest AS builder
+FROM alpine:3.12 AS builder
 LABEL maintainer Naba Das <hello@get-deck.com>
 # Add basics first
 RUN export DOCKER_BUILDKIT=1
@@ -72,8 +72,8 @@ WORKDIR /var/www
 # RUN ln -s /usr/bin/php7 /usr/bin/php
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 RUN ln -s /etc/php7 /etc/php
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" >> /etc/apk/repositories
-RUN apk add --no-cache php7-pecl-mongodb
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
+RUN apk add --no-cache php7-pecl-mongodb php7-intl
 FROM scratch
 COPY --from=builder / /
 WORKDIR /var/www
