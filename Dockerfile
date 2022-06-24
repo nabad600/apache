@@ -62,7 +62,7 @@ RUN set -x \
     && ln -sf /dev/stderr /var/log/apache2/error.log
 
 RUN apk --update add --no-cache  openrc nano bash icu-libs openssl openssl-dev gcc make g++ zlib-dev gdbm libsasl snappy php7-intl
-
+RUN apk upgrade
 COPY apache/ /
 COPY httpd.conf /etc/apache2/httpd.conf
 COPY php_ini/php.ini /etc/php7/
@@ -75,7 +75,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/reposi
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" >> /etc/apk/repositories
 RUN apk add icu-libs icu-dev python3 python2
 RUN apk add --no-cache php7-pecl-mongodb
-RUN apk upgrade
+
 FROM scratch
 COPY --from=builder / /
 WORKDIR /var/www
