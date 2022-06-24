@@ -73,7 +73,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -
 RUN ln -s /etc/php7 /etc/php
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main/" >> /etc/apk/repositories
-# RUN apk add icu-libs icu-dev python3 python2
+RUN apk add icu-libs icu-dev python3 python2
 RUN apk add --no-cache php7-pecl-mongodb
 RUN apk upgrade
 FROM scratch
