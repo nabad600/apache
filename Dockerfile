@@ -73,7 +73,7 @@ WORKDIR /var/www
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 RUN ln -s /etc/php7 /etc/php
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
-RUN apk add --no-cache php7-pecl-mongodb
+RUN apk add --no-cache icu-libs php7-pecl-mongodb
 FROM scratch
 COPY --from=builder / /
 WORKDIR /var/www
