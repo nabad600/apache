@@ -1,8 +1,7 @@
 name: Publish Docker Image
 
-on:
-  push:
-    branches: [ phpp7 ]
+on:  [push]
+  branches: [ phpp7 ]
 env:
   IMAGE_NAME: apache
   VERSION: v70
