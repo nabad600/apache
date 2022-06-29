@@ -66,6 +66,7 @@ COPY httpd.conf /etc/apache2/httpd.conf
 COPY php_ini/php.ini /etc/php7/
 WORKDIR /var/www
 
+
 # RUN ln -s /usr/bin/php7 /usr/bin/php
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 RUN ln -s /etc/php7 /etc/php
