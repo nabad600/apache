@@ -51,7 +51,7 @@ ARG DEPS="\
         bash \
 "
 
-RUN set -x \
+RUN set -x \ 
 #     && echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories \
     && echo "http://dl-cdn.alpinelinux.org/alpine/v3.5/community/" >> /etc/apk/repositories \
     && apk add --no-cache $DEPS \
