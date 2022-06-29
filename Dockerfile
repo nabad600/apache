@@ -9,7 +9,6 @@ ARG DEPS="\
         php7-calendar \
         php7-mbstring \
         php7-exif \
-        php7-ftp \
         php7-openssl \
         php7-zip \
         php7-sysvsem \
@@ -25,7 +24,6 @@ ARG DEPS="\
         php7-opcache \
         php7-dom \
         php7-xmlreader \
-        php7-xmlwriter \
         php7-tokenizer \
         php7-ctype \
         php7-session \
@@ -36,7 +34,6 @@ ARG DEPS="\
         php7-apache2 \
         php7-pdo \
         php7-pdo_dblib \
-        php7-pdo_mysql \
         php7-pdo_odbc \
         php7-pdo_pgsql\
         php7-pdo_sqlite \
