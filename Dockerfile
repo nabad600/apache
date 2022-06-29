@@ -1,4 +1,4 @@
-FROM alpine:3.16 AS builder
+FROM alpine:edge AS builder
 LABEL maintainer Naba Das <hello@get-deck.com>
 # Add basics first
 RUN export DOCKER_BUILDKIT=1
